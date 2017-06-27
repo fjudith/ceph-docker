@@ -31,7 +31,7 @@ function get_mon_config {
   fi
 
   # Create a monmap with the Pod Names and IP
-  monmaptool --create "${monmap_add_array[@]}" --fsid "${fsid}" "$MONMAP"
+  monmaptool --create $(echo $(printf "%s" "${monmap_add_array[@]}")) --fsid "${fsid}" "$MONMAP"
 
 }
 
